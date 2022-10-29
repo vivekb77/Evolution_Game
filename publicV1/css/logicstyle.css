@@ -1,0 +1,51 @@
+body {
+    padding: 80px;
+    background-color: rgb(255, 255, 255);
+}
+
+#gridContainer {
+    padding-bottom: 10px;
+}
+
+/* color of table background */
+table {
+    background-color: #1fbfb8; 
+    border-spacing: 0;
+}
+
+td {
+    /* color of border of cell */
+    border: 1px solid #fbfbfb; 
+    border-radius: 0px;
+    width: 30px;
+    height: 30px;
+}
+
+/* color / border of selected cell */
+td.live {
+    background-color: #d71b3b;
+    border-radius: 2px;
+}
+
+
+span {
+    /* color of text of buttons  */
+    color: rgb(255, 251, 251);
+}
+
+#start,
+#clear,
+#random {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;    
+    /* color of buttons */
+    background: linear-gradient(
+        to bottom right,
+        #d55caf, #a91d5c);
+}
+
+td.dead {
+    background-color: transparent;
+}
+
