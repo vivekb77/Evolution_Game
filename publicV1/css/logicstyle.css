@@ -13,19 +13,20 @@ table {
     border-spacing: 0;
 }
 
+/* color / border of selected cell */
+td.live {
+    background-color: #d71b3b;
+    border-radius: 0px;
+}
+
 td {
     /* color of border of cell */
-    border: 1px solid #fbfbfb; 
+    border: 1px solid #121111; 
     border-radius: 0px;
     width: 30px;
     height: 30px;
 }
 
-/* color / border of selected cell */
-td.live {
-    background-color: #d71b3b;
-    border-radius: 2px;
-}
 
 
 span {
@@ -42,7 +43,7 @@ span {
     /* color of buttons */
     background: linear-gradient(
         to bottom right,
-        #d55caf, #a91d5c);
+        #1D809F, #1D809F);
 }
 
 td.dead {

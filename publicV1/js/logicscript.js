@@ -1,5 +1,6 @@
 var rows = 23;
 var cols = 40;
+var generationCounter = 0;
 
 var playing = false;
 
@@ -7,7 +8,8 @@ var grid = new Array(rows);
 var nextGrid = new Array(rows);
 
 var timer;
-var reproductionTime = 100;
+var reproductionTime = 300;
+
 
 function initializeGrids() {
     for (var i = 0; i < rows; i++) {
@@ -125,7 +127,7 @@ function randomButtonHandler() {
 
 // clear the grid
 function clearButtonHandler() {
-    console.log("Clear the game: stop playing, clear the grid");
+    // console.log("Clear the game: stop playing, clear the grid");
     
     playing = false;
     var startButton = document.getElementById('start');
@@ -144,17 +146,21 @@ function clearButtonHandler() {
         cells[i].setAttribute("class", "dead");
     }
     resetGrids;
+    //generation counter
+    generationCounter = 0;
+    var generationCounter2 = document.getElementById("generationCounter");
+        generationCounter2.innerHTML = "Generation - 0"; 
 }
 
 // start/pause/continue the game
 function startButtonHandler() {
     if (playing) {
-        console.log("Pause the game");
+        // console.log("Pause the game");
         playing = false;
         this.innerHTML = "Continue";
         clearTimeout(timer);
     } else {
-        console.log("Continue the game");
+        // console.log("Continue the game");
         playing = true;
         this.innerHTML = "Pause";
         play();
@@ -168,6 +174,16 @@ function play() {
     if (playing) {
         timer = setTimeout(play, reproductionTime);
     }
+         //generation counter
+         generationCounter++;
+         var generationCounter1 = document.getElementById("generationCounter");
+         generationCounter1.innerHTML = "Generation - " +generationCounter;  
+
+         //timer can be chaged on run time by user
+         var setTimer = document.getElementById("myRange");
+         reproductionTime = 600 - setTimer.value;
+         //console.log(reproductionTime);
+
 }
 
 function computeNextGen() {
@@ -175,8 +191,13 @@ function computeNextGen() {
         for (var j = 0; j < cols; j++) {
             applyRules(i, j);
         }
+
+   
+       
     }
     
+    
+
     // copy NextGrid to grid, and reset nextGrid
     copyAndResetGrid();
     // copy all 1 values to "live" in the table
