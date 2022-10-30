@@ -11495,6 +11495,7 @@ footer.footer .social-link:hover {
   }
 }
 
+
 .portfolio-item {
   display: block;
   position: relative;
@@ -11610,4 +11611,18 @@ footer.footer .social-link:hover {
   height: 25px; /* Slider handle height */
   background: #1D809F; /* Green background */
   cursor: pointer; /* Cursor on hover */
+}
+
+
+
+.twitter-tweet{
+ 
+  /* Center horizontally*/
+  margin: 0 auto;
+}
+
+.mc_embed_signup{
+  display: flex;
+  justify-content: center;
+  
 }

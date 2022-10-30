@@ -1,5 +1,7 @@
 var rows = 23;
 var cols = 40;
+// var rows = 50;
+// var cols = 88;
 var generationCounter = 0;
 
 var playing = false;
