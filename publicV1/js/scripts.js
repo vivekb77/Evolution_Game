@@ -9,12 +9,12 @@ window.addEventListener('DOMContentLoaded', event => {
     let scrollToTopVisible = false;
     // Closes the sidebar menu
     const menuToggle = document.body.querySelector('.menu-toggle');
-    menuToggle.addEventListener('click', event => {
-        event.preventDefault();
-        sidebarWrapper.classList.toggle('active');
-        _toggleMenuIcon();
-        menuToggle.classList.toggle('active');
-    })
+    // menuToggle.addEventListener('click', event => {
+    //     event.preventDefault();
+    //     sidebarWrapper.classList.toggle('active');
+    //     _toggleMenuIcon();
+    //     menuToggle.classList.toggle('active');
+    // })
 
     // Closes responsive menu when a scroll trigger link is clicked
     var scrollTriggerList = [].slice.call(document.querySelectorAll('#sidebar-wrapper .js-scroll-trigger'));

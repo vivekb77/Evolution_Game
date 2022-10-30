@@ -123,6 +123,12 @@ function randomButtonHandler() {
             }
         }
     }
+
+    //analytics how many times clicked
+
+    const analytics = firebase.analytics();
+    analytics.logEvent('Random Button Clicked');
+       // console.log("Random Button Clicked");
 }
 
 // clear the grid
@@ -165,11 +171,15 @@ function startButtonHandler() {
         this.innerHTML = "Pause";
         play();
     }
+    // const analytics = firebase.analytics();
+    // analytics.logEvent('Play Button Clicked');
+    //     console.log("Play Button Clicked");
 }
 
 // run the life game
 function play() {
     computeNextGen();
+
     
     if (playing) {
         timer = setTimeout(play, reproductionTime);
@@ -183,6 +193,8 @@ function play() {
          var setTimer = document.getElementById("myRange");
          reproductionTime = 600 - setTimer.value;
          //console.log(reproductionTime);
+
+        
 
 }
 
@@ -258,3 +270,52 @@ function countNeighbors(row, col) {
 
 // Start everything
 window.onload = initialize;
+
+
+
+
+
+
+function wikiLinkClicked(){
+    const analytics = firebase.analytics();
+    analytics.logEvent('Wiki Link Clicked');
+       // console.log("Wiki Link Clicked");
+   }
+
+function twitterLinkClicked(){
+    
+    const analytics = firebase.analytics();
+    analytics.logEvent('Twitter Link Clicked');
+        //console.log("Twitter Link Clicked");
+       }
+       
+function playButtongClicked(){
+    
+        const analytics = firebase.analytics();
+        analytics.logEvent('Play Button Clicked');
+           // console.log("Play Button Clicked");
+           }
+
+function buyMeCoffeeClicked(){
+    
+            const analytics = firebase.analytics();
+            analytics.logEvent('Buy Me Coffe Clicked');
+               // console.log("Buy Me Coffe Clicked");
+               }     
+
+
+function buyBookClicked(){
+    
+                const analytics = firebase.analytics();
+                analytics.logEvent('Buy Book Clicked');
+                  //  console.log("Buy Book Clicked");
+                   }  
+
+                   
+
+function twitterHandleVisited(){
+    
+                    const analytics = firebase.analytics();
+                    analytics.logEvent('Twitter Handle Visited');
+                       // console.log("Twitter Handle Visited");
+                       }  
