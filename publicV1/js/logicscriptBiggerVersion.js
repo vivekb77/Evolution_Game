@@ -1,5 +1,5 @@
-var rows = 20;
-var cols = 40;
+var rows = 80;
+var cols = 150;
 // var rows = 50;
 // var cols = 88;
 var generationCounter = 0;
@@ -158,6 +158,9 @@ function clearButtonHandler() {
     generationCounter = 0;
     var generationCounter2 = document.getElementById("generationCounter");
         generationCounter2.innerHTML = "Generation - 0"; 
+
+
+    
 }
 
 // start/pause/continue the game
@@ -176,6 +179,8 @@ function startButtonHandler() {
     // const analytics = firebase.analytics();
     // analytics.logEvent('Play Button Clicked');
     //     console.log("Play Button Clicked");
+    //size of table at runtime
+  
 }
 
 // run the life game
@@ -196,6 +201,7 @@ function play() {
          reproductionTime = 600 - setTimer.value;
          //console.log(reproductionTime);
 
+         
         
 
 }
@@ -278,60 +284,21 @@ window.onload = initialize;
 
 
 
-function wikiLinkClicked(){
-    const analytics = firebase.analytics();
-    analytics.logEvent('Wiki Link Clicked');
-       // console.log("Wiki Link Clicked");
-   }
 
-function twitterLinkClicked(){
-    
-    const analytics = firebase.analytics();
-    analytics.logEvent('Twitter Link Clicked');
-        //console.log("Twitter Link Clicked");
-       }
-       
-function playButtongClicked(){
-    
-        const analytics = firebase.analytics();
-        analytics.logEvent('Play Button Clicked');
-           // console.log("Play Button Clicked");
-           }
 
-function buyMeCoffeeClicked(){
+function buyMeCoffeeClickedBigVersion(){
     
             const analytics = firebase.analytics();
-            analytics.logEvent('Buy Me Coffe Clicked');
+            analytics.logEvent('Buy Me Coffe Clicked on Big Version');
                // console.log("Buy Me Coffe Clicked");
                }     
-
-
-function buyBookClickedChaos(){
-    
-                const analytics = firebase.analytics();
-                analytics.logEvent('Buy Book Clicked Chaos');
-                  //  console.log("Buy Book Clicked");
-                   }  
-
- function buyBookClickedSapiens(){
-    
-                    const analytics = firebase.analytics();
-                    analytics.logEvent('Buy Book Clicked Sapiens');
-                      //  console.log("Buy Book Clicked");
-                       }  
-
-function twitterHandleVisited(){
-    
-                    const analytics = firebase.analytics();
-                    analytics.logEvent('Twitter Handle Visited');
-                       // console.log("Twitter Handle Visited");
-                       }  
+                       
 
                        
 
-function wentToBiggerVersion(){
+function wentToMainVersion(){
     
                         const analytics = firebase.analytics();
-                        analytics.logEvent('Went to play Bigger Version');
+                        analytics.logEvent('Went to play Main Version');
                            
                            }  
