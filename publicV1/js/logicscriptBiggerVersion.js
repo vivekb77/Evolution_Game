@@ -129,7 +129,7 @@ function randomButtonHandler() {
     //analytics how many times clicked
 
     const analytics = firebase.analytics();
-    analytics.logEvent('Random Button Clicked');
+    analytics.logEvent('Random Button Clicked on Bigger Version');
        // console.log("Random Button Clicked");
 }
 
@@ -290,7 +290,7 @@ function buyMeCoffeeClickedBigVersion(){
     
             const analytics = firebase.analytics();
             analytics.logEvent('Buy Me Coffe Clicked on Big Version');
-               // console.log("Buy Me Coffe Clicked");
+               // console.log("Buy Me Coffe Clicked big version");
                }     
                        
 
