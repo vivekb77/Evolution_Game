@@ -1,4 +1,4 @@
-var rows = 23;
+var rows = 20;
 var cols = 40;
 // var rows = 50;
 // var cols = 88;
@@ -306,14 +306,19 @@ function buyMeCoffeeClicked(){
                }     
 
 
-function buyBookClicked(){
+function buyBookClickedChaos(){
     
                 const analytics = firebase.analytics();
-                analytics.logEvent('Buy Book Clicked');
+                analytics.logEvent('Buy Book Clicked Chaos');
                   //  console.log("Buy Book Clicked");
                    }  
 
-                   
+ function buyBookClickedSapiens(){
+    
+                    const analytics = firebase.analytics();
+                    analytics.logEvent('Buy Book Clicked Sapiens');
+                      //  console.log("Buy Book Clicked");
+                       }  
 
 function twitterHandleVisited(){
     

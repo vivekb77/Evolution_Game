@@ -17,14 +17,15 @@ table {
 td.live {
     background-color: #d71b3b;
     border-radius: 0px;
+    /* border-radius: 10px; */
 }
 
 td {
     /* color of border of cell */
     border: 1px solid #121111; 
     border-radius: 0px;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 23px;
 }
 
 
