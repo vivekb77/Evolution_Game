@@ -1,5 +1,5 @@
 body {
-    padding: 80px;
+    padding: 20px 80px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -50,4 +50,10 @@ span {
 td.dead {
     background-color: transparent;
 }
-
+@media (max-width: 450px)
+{
+	body
+	{
+		padding: 0;
+	}
+}

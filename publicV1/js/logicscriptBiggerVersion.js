@@ -1,5 +1,5 @@
 var rows = 80;
-var cols = 150;
+var cols = 100;
 // var rows = 50;
 // var cols = 88;
 var generationCounter = 0;

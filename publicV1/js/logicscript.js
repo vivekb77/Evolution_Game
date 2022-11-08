@@ -1,5 +1,5 @@
-var rows = 20;
-var cols = 40;
+var rows = 15;
+var cols = 12;
 // var rows = 50;
 // var cols = 88;
 var generationCounter = 0;
@@ -173,9 +173,7 @@ function startButtonHandler() {
         this.innerHTML = "Pause";
         play();
     }
-    // const analytics = firebase.analytics();
-    // analytics.logEvent('Play Button Clicked');
-    //     console.log("Play Button Clicked");
+   
 }
 
 // run the life game
@@ -283,20 +281,7 @@ function wikiLinkClicked(){
     analytics.logEvent('Wiki Link Clicked');
        // console.log("Wiki Link Clicked");
    }
-
-function twitterLinkClicked(){
     
-    const analytics = firebase.analytics();
-    analytics.logEvent('Twitter Link Clicked');
-        //console.log("Twitter Link Clicked");
-       }
-       
-function playButtongClicked(){
-    
-        const analytics = firebase.analytics();
-        analytics.logEvent('Play Button Clicked');
-           // console.log("Play Button Clicked");
-           }
 
 function buyMeCoffeeClicked(){
     
@@ -304,21 +289,6 @@ function buyMeCoffeeClicked(){
             analytics.logEvent('Buy Me Coffe Clicked');
                // console.log("Buy Me Coffe Clicked");
                }     
-
-
-function buyBookClickedChaos(){
-    
-                const analytics = firebase.analytics();
-                analytics.logEvent('Buy Book Clicked Chaos');
-                  //  console.log("Buy Book Clicked");
-                   }  
-
- function buyBookClickedSapiens(){
-    
-                    const analytics = firebase.analytics();
-                    analytics.logEvent('Buy Book Clicked Sapiens');
-                      //  console.log("Buy Book Clicked");
-                       }  
 
 function twitterHandleVisited(){
     
@@ -328,10 +298,24 @@ function twitterHandleVisited(){
                        }  
 
                        
-
+                       
 function wentToBiggerVersion(){
     
                         const analytics = firebase.analytics();
                         analytics.logEvent('Went to play Bigger Version');
                            
-                           }  
+                           } 
+                           
+function wentToChessVersion(){
+    
+                        const analytics = firebase.analytics();
+                        analytics.logEvent('Went to play Chess Version');
+                               
+                       } 
+
+function affiliateLinkClicked(){
+    
+                        const analytics = firebase.analytics();
+                        analytics.logEvent('Blinkit Affiliate link Clicked');
+                               
+                       } 

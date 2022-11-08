@@ -1,5 +1,5 @@
 body {
-    padding: 80px;
+    padding: 20px 80px;
     background-color: rgb(255, 255, 255);
 }
 
@@ -9,23 +9,23 @@ body {
 
 /* color of table background */
 table {
-    background-color: #1fbfb8; 
+    background-color: #1c9bda; 
     border-spacing: 0;
 }
 
 /* color / border of selected cell */
 td.live {
-    background-color: #d71b3b;
+    background-color: #d00b0b;
     border-radius: 0px;
     /* border-radius: 10px; */
 }
 
 td {
     /* color of border of cell */
-    border: 1px solid #121111; 
-    border-radius: 0px;
-    width: 25px;
-    height: 23px;
+    border: 7px solid #241e1e; 
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
 }
 
 
@@ -50,4 +50,10 @@ span {
 td.dead {
     background-color: transparent;
 }
-
+@media (max-width: 450px)
+{
+	body
+	{
+		padding: 0;
+	}
+}

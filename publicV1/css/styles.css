@@ -11293,8 +11293,10 @@ html {
 }
 
 .content-section {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
+  /*padding-top: 7.5rem;
+  padding-bottom: 7.5rem;*/
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .content-section-heading h2, .content-section-heading .h2 {
@@ -11420,22 +11422,25 @@ html {
 }
 
 .callout {
-  padding: 15rem 0;
+  padding: 3rem 0 2rem;
   /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .callout h2, .callout .h2 {
-  font-size: 3.5rem;
+  /*font-size: 3.5rem;*/
+  font-size: 3rem;
   font-weight: 700;
   display: block;
-  max-width: 30rem;
+  /*max-width: 30rem;*/
 }
 
 footer.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  /*padding-top: 5rem;
+  padding-bottom: 5rem;*/
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 footer.footer .social-link {
   display: block;
@@ -11469,13 +11474,13 @@ footer.footer .social-link:hover {
   }
 }
 .masthead {
-  min-height: 30rem;
+  /*min-height: 10rem;*/
   position: relative;
   display: table;
   width: 100%;
-  height: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  /*height: auto;*/
+  padding-top: 0;
+  padding-bottom: 3rem;
   /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
@@ -11487,11 +11492,12 @@ footer.footer .social-link:hover {
   padding: 0;
 }
 @media (min-width: 992px) {
-  .masthead {
+  /*.masthead {
     height: 100vh;
-  }
+  }*/
   .masthead h1, .masthead .h1 {
-    font-size: 5.5rem;
+    /*font-size: 5.5rem;*/
+	font-size: 4rem;
   }
 }
 
