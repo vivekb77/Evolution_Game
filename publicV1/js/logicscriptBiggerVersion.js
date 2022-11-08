@@ -141,7 +141,7 @@ function clearButtonHandler() {
 
     playing = false;
     var startButton = document.getElementById('start');
-    startButton.innerHTML = "Start";
+    startButton.innerHTML = "Play";
     clearTimeout(timer);
 
     var cellsList = document.getElementsByClassName("live");
@@ -296,11 +296,23 @@ function buyMeCoffeeClickedBigVersion() {
 }
 
 
-
-
 function wentToMainVersion() {
 
     const analytics = firebase.analytics();
     analytics.logEvent('Went to play Main Version');
 
 }  
+
+function affiliateLinkClickedBiggerV() {
+
+    const analytics = firebase.analytics();
+    analytics.logEvent('Went to affiliate link Bigger Version');
+
+} 
+
+function twitterHandleVisited() {
+
+    const analytics = firebase.analytics();
+    analytics.logEvent('Twitter handle on Bigger Version');
+
+} 

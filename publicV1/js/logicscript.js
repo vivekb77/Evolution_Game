@@ -145,7 +145,7 @@ function clearButtonHandler() {
 
     playing = false;
     var startButton = document.getElementById('start');
-    startButton.innerHTML = "Start";
+    startButton.innerHTML = "Play";
     clearTimeout(timer);
 
     var cellsList = document.getElementsByClassName("live");
