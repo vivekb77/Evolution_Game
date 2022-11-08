@@ -1,9 +1,17 @@
-var rows = 15;
-var cols = 12;
+let windowWidth = window.innerWidth;
+if(windowWidth < 450)
+{
+	var rows = 15;
+	var cols = 12;
+}
+else
+{
+	var rows = 15;
+	var cols = 28;
+}
 // var rows = 50;
 // var cols = 88;
 var generationCounter = 0;
-
 var playing = false;
 
 var grid = new Array(rows);
