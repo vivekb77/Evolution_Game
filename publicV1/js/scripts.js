@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', event => {
         const scrollToTop = document.body.querySelector('.scroll-to-top');
         if (document.documentElement.scrollTop > 100) {
             if (!scrollToTopVisible) {
-                fadeIn(scrollToTop);
+                // fadeIn(scrollToTop);
                 scrollToTopVisible = true;
             }
         } else {
@@ -68,7 +68,7 @@ function fadeOut(el) {
 };
 
 function fadeIn(el, display) {
-    el.style.opacity = 0;
+    //el.style.opacity = 0;
     el.style.display = display || "block";
     (function fade() {
         var val = parseFloat(el.style.opacity);

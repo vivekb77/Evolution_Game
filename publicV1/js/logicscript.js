@@ -1,13 +1,11 @@
 let windowWidth = window.innerWidth;
-if(windowWidth < 450)
-{
-	var rows = 15;
-	var cols = 12;
+if (windowWidth < 450) {
+    var rows = 15;
+    var cols = 12;
 }
-else
-{
-	var rows = 15;
-	var cols = 28;
+else {
+    var rows = 15;
+    var cols = 28;
 }
 // var rows = 50;
 // var cols = 88;
@@ -62,7 +60,7 @@ function createTable() {
         console.error("Problem: No div for the drid table!");
     }
     var table = document.createElement("table");
-    
+
     for (var i = 0; i < rows; i++) {
         var tr = document.createElement("tr");
         for (var j = 0; j < cols; j++) {//
@@ -75,46 +73,46 @@ function createTable() {
         table.appendChild(tr);
     }
     gridContainer.appendChild(table);
+}
+
+function cellClickHandler() {
+    var rowcol = this.id.split("_");
+    var row = rowcol[0];
+    var col = rowcol[1];
+
+    var classes = this.getAttribute("class");
+    if (classes.indexOf("live") > -1) {
+        this.setAttribute("class", "dead");
+        grid[row][col] = 0;
+    } else {
+        this.setAttribute("class", "live");
+        grid[row][col] = 1;
     }
 
-    function cellClickHandler() {
-        var rowcol = this.id.split("_");
-        var row = rowcol[0];
-        var col = rowcol[1];
-        
-        var classes = this.getAttribute("class");
-        if(classes.indexOf("live") > -1) {
-            this.setAttribute("class", "dead");
-            grid[row][col] = 0;
-        } else {
-            this.setAttribute("class", "live");
-            grid[row][col] = 1;
-        }
-        
-    }
+}
 
-    function updateView() {
-        for (var i = 0; i < rows; i++) {
-            for (var j = 0; j < cols; j++) {
-                var cell = document.getElementById(i + "_" + j);
-                if (grid[i][j] == 0) {
-                    cell.setAttribute("class", "dead");
-                } else {
-                    cell.setAttribute("class", "live");
-                }
+function updateView() {
+    for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < cols; j++) {
+            var cell = document.getElementById(i + "_" + j);
+            if (grid[i][j] == 0) {
+                cell.setAttribute("class", "dead");
+            } else {
+                cell.setAttribute("class", "live");
             }
         }
     }
+}
 
 function setupControlButtons() {
     // button to start
     var startButton = document.getElementById('start');
     startButton.onclick = startButtonHandler;
-    
+
     // button to clear
     var clearButton = document.getElementById('clear');
     clearButton.onclick = clearButtonHandler;
-    
+
     // button to set random initial state
     var randomButton = document.getElementById("random");
     randomButton.onclick = randomButtonHandler;
@@ -138,18 +136,18 @@ function randomButtonHandler() {
 
     const analytics = firebase.analytics();
     analytics.logEvent('Random Button Clicked');
-       // console.log("Random Button Clicked");
+    // console.log("Random Button Clicked");
 }
 
 // clear the grid
 function clearButtonHandler() {
     // console.log("Clear the game: stop playing, clear the grid");
-    
+
     playing = false;
     var startButton = document.getElementById('start');
-    startButton.innerHTML = "Start";    
+    startButton.innerHTML = "Start";
     clearTimeout(timer);
-    
+
     var cellsList = document.getElementsByClassName("live");
     // convert to array first, otherwise, you're working on a live node list
     // and the update doesn't work!
@@ -157,7 +155,7 @@ function clearButtonHandler() {
     for (var i = 0; i < cellsList.length; i++) {
         cells.push(cellsList[i]);
     }
-    
+
     for (var i = 0; i < cells.length; i++) {
         cells[i].setAttribute("class", "dead");
     }
@@ -165,7 +163,7 @@ function clearButtonHandler() {
     //generation counter
     generationCounter = 0;
     var generationCounter2 = document.getElementById("generationCounter");
-        generationCounter2.innerHTML = "Generation - 0"; 
+    generationCounter2.innerHTML = "Generation - 0";
 }
 
 // start/pause/continue the game
@@ -181,28 +179,28 @@ function startButtonHandler() {
         this.innerHTML = "Pause";
         play();
     }
-   
+
 }
 
 // run the life game
 function play() {
     computeNextGen();
 
-    
+
     if (playing) {
         timer = setTimeout(play, reproductionTime);
     }
-         //generation counter
-         generationCounter++;
-         var generationCounter1 = document.getElementById("generationCounter");
-         generationCounter1.innerHTML = "Generation - " +generationCounter;  
+    //generation counter
+    generationCounter++;
+    var generationCounter1 = document.getElementById("generationCounter");
+    generationCounter1.innerHTML = "Generation - " + generationCounter;
 
-         //timer can be chaged on run time by user
-         var setTimer = document.getElementById("myRange");
-         reproductionTime = 600 - setTimer.value;
-         //console.log(reproductionTime);
+    //timer can be chaged on run time by user
+    var setTimer = document.getElementById("myRange");
+    reproductionTime = 600 - setTimer.value;
+    //console.log(reproductionTime);
 
-        
+
 
 }
 
@@ -212,11 +210,11 @@ function computeNextGen() {
             applyRules(i, j);
         }
 
-   
-       
+
+
     }
-    
-    
+
+
 
     // copy NextGrid to grid, and reset nextGrid
     copyAndResetGrid();
@@ -241,37 +239,37 @@ function applyRules(row, col) {
             nextGrid[row][col] = 0;
         }
     } else if (grid[row][col] == 0) {
-            if (numNeighbors == 3) {
-                nextGrid[row][col] = 1;
-            }
+        if (numNeighbors == 3) {
+            nextGrid[row][col] = 1;
         }
     }
-    
+}
+
 function countNeighbors(row, col) {
     var count = 0;
-    if (row-1 >= 0) {
-        if (grid[row-1][col] == 1) count++;
+    if (row - 1 >= 0) {
+        if (grid[row - 1][col] == 1) count++;
     }
-    if (row-1 >= 0 && col-1 >= 0) {
-        if (grid[row-1][col-1] == 1) count++;
+    if (row - 1 >= 0 && col - 1 >= 0) {
+        if (grid[row - 1][col - 1] == 1) count++;
     }
-    if (row-1 >= 0 && col+1 < cols) {
-        if (grid[row-1][col+1] == 1) count++;
+    if (row - 1 >= 0 && col + 1 < cols) {
+        if (grid[row - 1][col + 1] == 1) count++;
     }
-    if (col-1 >= 0) {
-        if (grid[row][col-1] == 1) count++;
+    if (col - 1 >= 0) {
+        if (grid[row][col - 1] == 1) count++;
     }
-    if (col+1 < cols) {
-        if (grid[row][col+1] == 1) count++;
+    if (col + 1 < cols) {
+        if (grid[row][col + 1] == 1) count++;
     }
-    if (row+1 < rows) {
-        if (grid[row+1][col] == 1) count++;
+    if (row + 1 < rows) {
+        if (grid[row + 1][col] == 1) count++;
     }
-    if (row+1 < rows && col-1 >= 0) {
-        if (grid[row+1][col-1] == 1) count++;
+    if (row + 1 < rows && col - 1 >= 0) {
+        if (grid[row + 1][col - 1] == 1) count++;
     }
-    if (row+1 < rows && col+1 < cols) {
-        if (grid[row+1][col+1] == 1) count++;
+    if (row + 1 < rows && col + 1 < cols) {
+        if (grid[row + 1][col + 1] == 1) count++;
     }
     return count;
 }
@@ -284,46 +282,46 @@ window.onload = initialize;
 
 
 
-function wikiLinkClicked(){
+function wikiLinkClicked() {
     const analytics = firebase.analytics();
     analytics.logEvent('Wiki Link Clicked');
-       // console.log("Wiki Link Clicked");
-   }
-    
+    //console.log("Wiki Link Clicked");
+}
 
-function buyMeCoffeeClicked(){
-    
-            const analytics = firebase.analytics();
-            analytics.logEvent('Buy Me Coffe Clicked');
-               // console.log("Buy Me Coffe Clicked");
-               }     
 
-function twitterHandleVisited(){
-    
-                    const analytics = firebase.analytics();
-                    analytics.logEvent('Twitter Handle Visited');
-                       // console.log("Twitter Handle Visited");
-                       }  
+function buyMeCoffeeClicked() {
 
-                       
-                       
-function wentToBiggerVersion(){
-    
-                        const analytics = firebase.analytics();
-                        analytics.logEvent('Went to play Bigger Version');
-                           
-                           } 
-                           
-function wentToChessVersion(){
-    
-                        const analytics = firebase.analytics();
-                        analytics.logEvent('Went to play Chess Version');
-                               
-                       } 
+    const analytics = firebase.analytics();
+    analytics.logEvent('Buy Me Coffe Clicked');
+    //console.log("Buy Me Coffe Clicked");
+}
 
-function affiliateLinkClicked(){
-    
-                        const analytics = firebase.analytics();
-                        analytics.logEvent('Blinkit Affiliate link Clicked');
-                               
-                       } 
+function twitterHandleVisited() {
+
+    const analytics = firebase.analytics();
+    analytics.logEvent('Twitter Handle Visited');
+    //console.log("Twitter Handle Visited");
+}
+
+
+
+function wentToBiggerVersion() {
+
+    const analytics = firebase.analytics();
+    analytics.logEvent('Went to play Bigger Version');
+    // console.log("Bigger version");
+}
+
+function wentToChessVersion() {
+
+    const analytics = firebase.analytics();
+    analytics.logEvent('Went to play Chess Version');
+    // console.log("Smaller version");
+}
+
+function affiliateLinkClicked() {
+
+    const analytics = firebase.analytics();
+    analytics.logEvent('Affiliate link Clicked');
+    // console.log("Blinkit");
+} 
