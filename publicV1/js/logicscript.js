@@ -197,9 +197,9 @@ function play() {
 
     //timer can be chaged on run time by user
     var setTimer = document.getElementById("myRange");
-    reproductionTime = 600 - setTimer.value;
+    reproductionTime = 510 - setTimer.value;
     //console.log(reproductionTime);
-
+    
 
 
 }
@@ -208,9 +208,10 @@ function computeNextGen() {
     for (var i = 0; i < rows; i++) {
         for (var j = 0; j < cols; j++) {
             applyRules(i, j);
+            randomButtonHandler();
         }
 
-
+        
 
     }
 

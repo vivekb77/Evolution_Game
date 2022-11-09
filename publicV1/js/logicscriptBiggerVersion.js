@@ -200,7 +200,7 @@ function play() {
 
     //timer can be chaged on run time by user
     var setTimer = document.getElementById("myRange");
-    reproductionTime = 600 - setTimer.value;
+    reproductionTime = 510 - setTimer.value;
     //console.log(reproductionTime);
 
 
