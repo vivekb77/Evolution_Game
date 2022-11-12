@@ -6,24 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>How Evolution occurs? - Play Game </title>
+    <title>How Evolution works? - Play Game </title>
     <!-- Natural selection leads to evolution. -->
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script> -->
     <!-- Simple line icons-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
-        rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+        rel="stylesheet" /> -->
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-        rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-
-    <!-- logic part -->
-    <link rel="stylesheet" href="css/logicstyle.css">
-
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+        rel="stylesheet" type="text/css" /> -->
+    
+    <!-- mailchimp -->
     <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
 
     <!-- mailchimp style
@@ -32,9 +28,68 @@
 	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style> -->
-
-<!-- Meta Pixel Code -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970421141"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-970421141');
+</script>
+
+<!-- Event snippet for Website traffic conversion page -->
+<script>
+    gtag('event', 'conversion', {'send_to': 'AW-970421141/E4V1CKbBz4EYEJXn3c4D'});
+  </script>
+
+
+ <!-- firebase -->
+ <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+ <script type="module">
+     // Import the functions you need from the SDKs you need
+     //   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+     //   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
+     // TODO: Add SDKs for Firebase products that you want to use
+     // https://firebase.google.com/docs/web/setup#available-libraries
+
+     // Your web app's Firebase configuration
+     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+     const firebaseConfig = {
+         apiKey: "AIzaSyBVoy8gOaBJwyHuQDr_b3P42zJW0rLDiWU",
+         authDomain: "evolution-game-f185a.firebaseapp.com",
+         databaseURL: "https://evolution-game-f185a-default-rtdb.firebaseio.com",
+         projectId: "evolution-game-f185a",
+         storageBucket: "evolution-game-f185a.appspot.com",
+         messagingSenderId: "891011049804",
+         appId: "1:891011049804:web:424c57535f742adb1cc7e9",
+         measurementId: "G-LESR9KR62M"
+     };
+
+     // Initialize Firebase
+     //const app = initializeApp(firebaseConfig);
+     //const analytics = getAnalytics(app);
+
+     firebase.initializeApp(firebaseConfig);
+     const analytics = firebase.analytics();
+     //gtag('config', 'G-LESR9KR62M', { cookie_flags: 'max-age=7200;path=/;secure;samesite=none' });
+
+
+
+ </script>
+
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <!-- logic part -->
+        <link rel="stylesheet" href="css/logicstyle.css">
+
+        
+<!-- Meta Pixel Code -->
+<!-- <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -48,7 +103,7 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1196034801124932&ev=PageView&noscript=1"
-    /></noscript>
+    /></noscript> -->
     <!-- End Meta Pixel Code -->
     
 </head>
@@ -65,27 +120,11 @@
 
 
 
-    <!-- Header-->
-    <header class="masthead d-flex align-items-center">
-        <div class="container px-4 px-lg-5 text-center">
-            <h4 class="mb-1">Evolution Game Rules</h4></br>
-            <p class="leffad mb-3"><em>Every cell interacts with its eight neighbours, horizontally, vertically, and
-                    diagonally adjacent.
-                    <br />
-                    <br />
-                    Every generation evolves according to the following 4 rules:
-                    <br />
-                    1. Any live cell with fewer than two live neighbours dies, as if by underpopulation.
-                    <br />
-                    2. Any live cell with two or three live neighbours lives on to the next generation.
-                    <br />
-                    3. Any live cell with more than three live neighbours dies, as if by overpopulation.
-                    <br />
-                    4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-            </p>
-            <!-- <a class="btn btn-primary btn-xl" href="#about" onclick="playButtongClicked()">Got the rules? Play now!</a> -->
-        </div>
-    </header>
+        <header class="masthead d-flex align-items-center">
+            <div class="container px-4 px-lg-5 text-center">
+                <h4 class="mb-1">Evolution Game</h4>
+                </div>
+                </header>
 
 
     <!-- About-->
@@ -93,10 +132,11 @@
         <div class="container px-4 px-lg-5 text-center">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-10">
-                    <p>Click Random -> Play buttons</p>
-                    <p> Cells die or reproduce as per above rules but you can click on a cell to kill it or make it
+                   
+                    <p> Read the below rules. Cells die or reproduce as per the rules but you can click on a cell to kill it or make it
                         alive to change the outcome of the rules. Keep the cells alive for most generations.
                     </p>
+                    <p>Click Random -> Play buttons</p>
                     <h5 id="generationCounter">Generation - 0</h5>
 
                     <div id="widthheight"></div>
@@ -122,94 +162,123 @@
 
                     <!-- <a class="btn btn-dark btn-xl" href="#services">Share</a> -->
 
-                    <p>Spread the Chaos, Share with Friends</p>
-                    </br>
-                    <!-- Social Icons pop up -->
-                    <div class="modal-container" id="modal-container">
-                        <div class="modalpopup">
-                            <div class="addthis_inline_share_toolbox"></div>
-                            <!-- <button class="btn-closepopup" id="closepopup">Close</button> -->
+                   
+    </section>
+
+     <!-- Header-->
+     <header class="masthead d-flex align-items-center">
+        <div class="container px-4 px-lg-5 text-center">
+            <h5 class="mb-1">Rules of the Game</h5></br>
+            <p class="leffad mb-3"><em>Every cell interacts with its eight neighbours, horizontally, vertically, and
+                    diagonally adjacent.
+                    <br />
+                    <br />
+                    Every generation evolves according to the following 4 rules:
+                    <br />
+                    1. Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+                    <br />
+                    2. Any live cell with two or three live neighbours lives on to the next generation.
+                    <br />
+                    3. Any live cell with more than three live neighbours dies, as if by overpopulation.
+                    <br />
+                    4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+            </p>
+            <!-- <a class="btn btn-primary btn-xl" href="#about" onclick="playButtongClicked()">Got the rules? Play now!</a> -->
+        </div>
+    </header>
+   
+    <section class="callout">
+        <div class="container px-4 px-lg-5 text-center">
+            <h5>Evolution of Intelligent design?</h5> 
+        </br>
+            <p class="mx-auto mb-5">
+                <b style="color:#d00b0b">The Human brain is the most complex thing in the Universe.</b> It appears that everything is designed for a purpose. Was it due to Evolution or Intelligent design? Confused about
+                how evolution works? If you understand the rules of Physics and Chemistry, you can see the possibility
+                of atoms coming together to form a complex thing like our brain.
+            </br></br>
+            <b style="color:#d00b0b">This is not about how Evolution occurred, this is about how CAN Evolution occur.</b>
+            </p>
+
+            <a class="btn btn-primary btn-xl" style="background-color:#d00b0b" href="play.html" onclick="affiliateLinkClicked()">Download Now!</a>
+        </div>
+
+       
+    </br>
+    
+        <!-- <section class="callout">
+            <div class="container px-4 px-lg-5 text-center">
+                <p class="mx-auto mb-4">
+                    If you'd like to say thanks, I'd appreciate a coffee 😊
+                </p> -->
+                <!-- <a href="https://www.buymeacoffee.com/EvolutionGame" onclick="buyMeCoffeeClicked()" target="_blank"><img
+                        src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=EvolutionGame&button_colour=FF5F5F&font_colour=ffffff&font_family=Bree&outline_colour=000000&coffee_colour=FFDD00" /></a> -->
+                        <!-- <a class="btn btn-primary btn-xl" href="https://www.buymeacoffee.com/EvolutionGame" onclick="buyMeCoffeeClicked()"
+                        target="_blank">Buy me a Coffee!</a>
+            </div>
+    
+           
+    
+        </section> -->
+        <section class="callout">
+            <div class="container px-4 px-lg-5 text-center">
+                <p>Spread the Chaos, Share with Friends</p>
+        <a class="btn btn-primary btn-x" id="copyURL" onclick="copySharetext()">Copy Link to Share</a>
+            </section>
+
+    </section>
+
+    
+
+    <!-- Callout-->
+        <!-- Begin Mailchimp Signup Form -->
+
+        <div id="mc_embed_signup" class="mc_embed_signup">
+            <form
+                action="https://online.us21.list-manage.com/subscribe/post?u=a7cacf4a2c26e93aac38be6e4&amp;id=bfe2d07b4a&amp;f_id=00b8c6e1f0"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                    <h6>Evolution or Intellignet Design, Get a free pdf on Evolution</h6>
+                    <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+                        </label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                        <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                    </div>
+                    <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            name="b_a7cacf4a2c26e93aac38be6e4_bfe2d07b4a" tabindex="-1" value=""></div>
+                    <div class="optionalParent">
+                        <div class="clear foot">
+                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                class="button">
+                            <!-- <p class="brandingLogo"><a href="http://eepurl.com/icvhjv" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> -->
                         </div>
                     </div>
                 </div>
-            </div>
-    </section>
-
-    <!-- Begin Mailchimp Signup Form -->
-
-    <div id="mc_embed_signup" class="mc_embed_signup">
-        <form
-            action="https://online.us21.list-manage.com/subscribe/post?u=a7cacf4a2c26e93aac38be6e4&amp;id=bfe2d07b4a&amp;f_id=00b8c6e1f0"
-            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-            target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-                <h2>Evolution or Intelligent Design? Join the Newsletter</h2>
-                <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
-                <div class="mc-field-group">
-                    <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
-                    </label>
-                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-                    <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-                </div>
-                <div id="mce-responses" class="clear foot">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                        name="b_a7cacf4a2c26e93aac38be6e4_bfe2d07b4a" tabindex="-1" value=""></div>
-                <div class="optionalParent">
-                    <div class="clear foot">
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                            class="button">
-                        <!-- <p class="brandingLogo"><a href="http://eepurl.com/icvhjv" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> -->
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-    <script
-        type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
-    <!--End mc_embed_signup-->
-
-    <!-- Callout-->
-    <section class="callout">
-        <div class="container px-4 px-lg-5 text-center">
-            <p class="mx-auto mb-4">
-                If you'd like to say thanks, I'd appreciate a coffee 😊
-            </p>
-            <a href="https://www.buymeacoffee.com/EvolutionGame" onclick="buyMeCoffeeClicked()" target="_blank"><img
-                    src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=EvolutionGame&button_colour=FF5F5F&font_colour=ffffff&font_family=Bree&outline_colour=000000&coffee_colour=FFDD00" /></a>
+            </form>
         </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+        <script type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+       
+        <!--End mailchimp_embed_signup-->
 
 
+ 
 
-    </section>
-
-    <section class="callout">
-        <div class="container px-4 px-lg-5 text-center">
-            <p class="mx-auto mb-5">
-                Human brain is the most complex thing in the universe. <b>Evolution of Intelligent design?</b> Confused about
-                how evolution works? If you understand the rules of Physics and Chemistry, you can see the possibility
-                of atoms coming together to form a complex thing like our brain.
-                Read Best Books about Evolution and Origin of Life to Boost Your Understanding. Few books I read here
-                like Origin of Species, Origin Story, Genesis, Chaos Theory will help you to better understand and
-                explain evolution.
-            </p>
-
-            <a class="btn btn-primary btn-xl" href="https://www.blinkist.com" onclick="affiliateLinkClicked()"
-                target="_blank">Take me there!</a>
-        </div>
-
-
-
-    </section>
-
-    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Stress busting effets. Take a break for a while. Play <a href="https://t.co/cEweLzxAWV">https://t.co/cEweLzxAWV</a> <a href="https://t.co/mq87bbATlW">pic.twitter.com/mq87bbATlW</a></p>&mdash; Evolutionary Way (@EvolutionaryWay) <a href="https://twitter.com/EvolutionaryWay/status/1589941235837722624?ref_src=twsrc%5Etfw">November 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Stress busting effets. Take a break for a while. Play <a href="https://t.co/emfeFPY4EU">https://t.co/emfeFPY4EU</a> <a href="https://t.co/vZxsa7lYxp">pic.twitter.com/vZxsa7lYxp</a></p>&mdash; Evolutionary Way (@EvolutionaryWay) <a href="https://twitter.com/EvolutionaryWay/status/1587374696261042176?ref_src=twsrc%5Etfw">November 1, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Stress busting effets. Take a break for a while. Play <a href="https://t.co/cEweLzxAWV">https://t.co/cEweLzxAWV</a> <a href="https://t.co/mq87bbATlW">pic.twitter.com/mq87bbATlW</a></p>&mdash; Evolutionary Way (@EvolutionaryWay) <a href="https://twitter.com/EvolutionaryWay/status/1589941235837722624?ref_src=twsrc%5Etfw">November 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Stress busting effets. Take a break for a while. Play <a href="https://t.co/emfeFPY4EU">https://t.co/emfeFPY4EU</a> <a href="https://t.co/vZxsa7lYxp">pic.twitter.com/vZxsa7lYxp</a></p>&mdash; Evolutionary Way (@EvolutionaryWay) <a href="https://twitter.com/EvolutionaryWay/status/1587374696261042176?ref_src=twsrc%5Etfw">November 1, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+    
+   
     <br />
+
+
+
 
     <!-- Call to Action-->
     <section class="content-section bg-primary text-white">
@@ -267,41 +336,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <!-- firebase -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
-
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        //   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-        //   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyBVoy8gOaBJwyHuQDr_b3P42zJW0rLDiWU",
-            authDomain: "evolution-game-f185a.firebaseapp.com",
-            databaseURL: "https://evolution-game-f185a-default-rtdb.firebaseio.com",
-            projectId: "evolution-game-f185a",
-            storageBucket: "evolution-game-f185a.appspot.com",
-            messagingSenderId: "891011049804",
-            appId: "1:891011049804:web:424c57535f742adb1cc7e9",
-            measurementId: "G-LESR9KR62M"
-        };
-
-        // Initialize Firebase
-        //const app = initializeApp(firebaseConfig);
-        //const analytics = getAnalytics(app);
-
-        firebase.initializeApp(firebaseConfig);
-        const analytics = firebase.analytics();
-        gtag('config', 'ID', { cookie_flags: 'max-age=7200;secure;samesite=none' });
-
-
-
-    </script>
+   
 
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
@@ -310,10 +345,7 @@
     <script src="js/logicscript.js"></script>
 
 
-    <!-- social icons -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55c1c74c27ca469a"></script>
-
-
+    
 
 
     </div>

@@ -324,5 +324,17 @@ function affiliateLinkClicked() {
 
     const analytics = firebase.analytics();
     analytics.logEvent('Affiliate link Clicked');
-    // console.log("Blinkit");
+    console.log("Blinkit");
 } 
+
+function copySharetext(){
+   
+    navigator.clipboard.writeText("https://evolutiongame.online");
+    var copyURL = document.getElementById('copyURL');
+    copyURL.innerHTML = "Copied!!";
+
+    const analytics = firebase.analytics();
+    analytics.logEvent('Link to share copied on index');
+   
+    //console.log("copied");
+}

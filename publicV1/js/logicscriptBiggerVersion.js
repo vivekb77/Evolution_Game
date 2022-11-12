@@ -292,7 +292,7 @@ function buyMeCoffeeClickedBigVersion() {
 
     const analytics = firebase.analytics();
     analytics.logEvent('Buy Me Coffe Clicked on Big Version');
-    // console.log("Buy Me Coffe Clicked big version");
+    console.log("Buy Me Coffe Clicked big version");
 }
 
 
@@ -316,3 +316,15 @@ function twitterHandleVisited() {
     analytics.logEvent('Twitter handle on Bigger Version');
 
 } 
+
+function copySharetext(){
+   
+    navigator.clipboard.writeText("https://evolutiongame.online/play.html");
+    var copyURL = document.getElementById('copyURL');
+    copyURL.innerHTML = "Copied!!";
+
+    const analytics = firebase.analytics();
+    analytics.logEvent('Link to share copied');
+   
+    //console.log("copied");
+}

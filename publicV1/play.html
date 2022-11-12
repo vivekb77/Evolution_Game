@@ -12,13 +12,13 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script> -->
     <!-- Simple line icons-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
-        rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+        rel="stylesheet" /> -->
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-        rel="stylesheet" type="text/css" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+        rel="stylesheet" type="text/css" /> -->
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 
@@ -34,8 +34,59 @@
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style> -->
 
-<!-- Meta Pixel Code -->
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-970421141"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-970421141');
+</script>
+
+<!-- Event snippet for Website traffic conversion page -->
+<script>
+    gtag('event', 'conversion', {'send_to': 'AW-970421141/E4V1CKbBz4EYEJXn3c4D'});
+  </script>
+
+
+  <!-- firebase -->
+  <script defer src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+  <script defer type="module">
+      // Import the functions you need from the SDKs you need
+      //   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+      //   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+          apiKey: "AIzaSyBVoy8gOaBJwyHuQDr_b3P42zJW0rLDiWU",
+          authDomain: "evolution-game-f185a.firebaseapp.com",
+          databaseURL: "https://evolution-game-f185a-default-rtdb.firebaseio.com",
+          projectId: "evolution-game-f185a",
+          storageBucket: "evolution-game-f185a.appspot.com",
+          messagingSenderId: "891011049804",
+          appId: "1:891011049804:web:424c57535f742adb1cc7e9",
+          measurementId: "G-LESR9KR62M"
+      };
+
+      // Initialize Firebase
+      //const app = initializeApp(firebaseConfig);
+      //const analytics = getAnalytics(app);
+
+      firebase.initializeApp(firebaseConfig);
+      const analytics = firebase.analytics();
+      //gtag('config', 'ID', { cookie_flags: 'max-age=7200;secure;samesite=none' });
+     // gtag('config', 'G-LESR9KR62M', { cookie_flags: 'max-age=7200;path=/;secure;samesite=none' });
+
+  </script>
+
+<!-- Meta Pixel Code -->
+<!-- <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -49,7 +100,7 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1196034801124932&ev=PageView&noscript=1"
-    /></noscript>
+    /></noscript> -->
     <!-- End Meta Pixel Code -->
     
 </head>
@@ -122,12 +173,13 @@
                     <h6>Spread the Chaos, Share with friends</h6>
                     </br>
                     <!-- Social Icons pop up -->
-                    <div class="modal-container" id="modal-container">
+                    <!-- <div class="modal-container" id="modal-container">
                         <div class="modalpopup">
-                            <div class="addthis_inline_share_toolbox"></div>
+                            <div class="addthis_inline_share_toolbox"></div> -->
                             <!-- <button class="btn-closepopup" id="closepopup">Close</button> -->
-                        </div>
-
+                        <!-- </div> -->
+                        <a class="btn btn-primary btn-x" id="copyURL" onclick="copySharetext()"
+                        >Copy Link to Share</a>
 
                     </div>
                 </div>
@@ -154,18 +206,22 @@
             </h6>
 
             <!-- <a class="btn btn-primary btn-xl" href="https://www.buymeacoffee.com/EvolutionGame" onclick="buyMeCoffeeClickedBigVersion()" target="_blank">Buy me a Coffee</a> -->
-            <a href="https://www.buymeacoffee.com/EvolutionGame" onclick="buyMeCoffeeClickedBigVersion()"
+            <!-- <a href="https://www.buymeacoffee.com/EvolutionGame" onclick="buyMeCoffeeClickedBigVersion()"
                 target="_blank"><img
-                    src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=EvolutionGame&button_colour=FF5F5F&font_colour=ffffff&font_family=Bree&outline_colour=000000&coffee_colour=FFDD00" /></a>
-        </div>
+                    src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=EvolutionGame&button_colour=FF5F5F&font_colour=ffffff&font_family=Bree&outline_colour=000000&coffee_colour=FFDD00" /></a> -->
+                    <a class="btn btn-primary btn-xl" href="https://www.buymeacoffee.com/EvolutionGame" onclick="buyMeCoffeeClickedBigVersion()"
+                    target="_blank">Buy me a Coffee!</a>
+                </div>
 
 
     </section>
 
     <section class="callout">
         <div class="container px-4 px-lg-5 text-center">
+            <h5>Evolution of Intelligent design?</h5> 
+        </br>
             <p class="mx-auto mb-5">
-                Human brain is the most complex thing in the universe. <b>Evolution of Intelligent design?</b> Confused about
+                Human brain is the most complex thing in the universe. It appears that everything is designed for a purpose. Was it due to Evolution or Intelligent design? Confused about
                 how evolution works? If you understand the rules of Physics and Chemistry, you can see the possibility
                 of atoms coming together to form a complex thing like our brain.
                 Read Best Books about Evolution and Origin of Life to Boost Your Understanding. Few books I read here
@@ -173,7 +229,7 @@
                 explain evolution.
             </p>
 
-            <a class="btn btn-primary btn-xl" href="https://www.blinkist.com" onclick="affiliateLinkClickedBiggerV()"
+            <a class="btn btn-primary btn-xl" href="https://www.blinkist.com" onclick="affiliateLinkClicked()"
                 target="_blank">Take me there!</a>
         </div>
 
@@ -190,7 +246,7 @@
             target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
                 <h6>Evolution or Intellignet Design, join the newsletter</h6>
-                <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
                 <div class="mc-field-group">
                     <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
                     </label>
@@ -215,9 +271,9 @@
         </form>
     </div>
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-    <script
-        type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
-    <!--End mc_embed_signup-->
+    <script type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+   
+    <!--End mailchimp_embed_signup-->
 
     <!-- Footer-->
     <footer class="footer text-center">
@@ -238,47 +294,17 @@
     </footer>
     <!-- Scroll to Top Button-->
     <!-- <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a> -->
+
+   
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- firebase -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
-
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        //   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-        //   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyBVoy8gOaBJwyHuQDr_b3P42zJW0rLDiWU",
-            authDomain: "evolution-game-f185a.firebaseapp.com",
-            databaseURL: "https://evolution-game-f185a-default-rtdb.firebaseio.com",
-            projectId: "evolution-game-f185a",
-            storageBucket: "evolution-game-f185a.appspot.com",
-            messagingSenderId: "891011049804",
-            appId: "1:891011049804:web:424c57535f742adb1cc7e9",
-            measurementId: "G-LESR9KR62M"
-        };
-
-        // Initialize Firebase
-        //const app = initializeApp(firebaseConfig);
-        //const analytics = getAnalytics(app);
-
-        firebase.initializeApp(firebaseConfig);
-        const analytics = firebase.analytics();
-        gtag('config', 'ID', { cookie_flags: 'max-age=7200;secure;samesite=none' });
-
-    </script>
-    <!-- Core theme JS-->
+      <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <!-- logic script -->
     <script src="js/logicscriptBiggerVersion.js"></script>
     <!-- social icons -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55c1c74c27ca469a"></script>
+    <!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55c1c74c27ca469a"></script> -->
     </div>
 
 </body>
